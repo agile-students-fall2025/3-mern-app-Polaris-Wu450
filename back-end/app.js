@@ -78,5 +78,29 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+// a route to handle fetching about us information
+app.get('/about', async (req, res) => {
+  try {
+    const aboutData = {
+      name: 'Polaris Wu',
+      bio: [
+        'Hello! I\'m Polaris Wu, a senior at New York University majoring in Computer Science with minors in Mathematics and Web Programming and Applications.',
+        'I\'m passionate about backend and full-stack software development, with a particular interest in AI agents, AI applications, and cloud development. I love exploring how emerging technologies can solve real-world problems and create meaningful user experiences.',
+        'When I\'m not coding, you can find me traveling to new places, capturing moments through photography, relaxing with good music, singing at karaoke, or exploring the latest culinary delights. I believe in maintaining a healthy work-life balance and finding inspiration in diverse experiences.',
+        'I\'m always excited to connect with fellow developers, innovators, and anyone who shares similar interests. Feel free to reach out ~'
+      ],
+      imageUrl: '/profile_image.JPG',
+      status: 'success'
+    }
+    res.json(aboutData)
+  } catch (err) {
+    console.error(err)
+    res.status(400).json({
+      error: err,
+      status: 'failed to retrieve about data'
+    })
+  }
+})
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!

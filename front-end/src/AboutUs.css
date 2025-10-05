@@ -1,0 +1,31 @@
+.AboutUs-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .AboutUs-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .AboutUs-bio {
+    text-align: left;
+    margin-top: 30px;
+  }
+  
+  .AboutUs-bio p {
+    line-height: 1.8;
+    margin: 20px 0;
+    font-size: 16px;
+  }
+  
+  .AboutUs-error {
+    color: red;
+    font-weight: bold;
+  }
